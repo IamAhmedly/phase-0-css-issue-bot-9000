@@ -25,7 +25,7 @@ describe("css/style.css", () => {
   it("corrects the 'body' background declaration", () => {
     const rule = findRule(css.cssRules, "body");
     const hint = "Incorrect background property for body";
-    expect(rule.style["background-color"], hint).to.eq("pink");
+    expect(rule.style["background"], hint).to.eq("pink");
   });
 
   it("corrects the 'h1' font-size declaration", () => {
@@ -49,6 +49,6 @@ describe("css/style.css", () => {
   it("corrects the '#tasks .completed' background declaration", () => {
     const rule = findRule(css.cssRules, "#tasks .completed");
     const hint = "Incorrect background property for '#tasks .completed'";
-    expect(rule.style["background-color"], hint).to.eq("#ccc");
+    expect(rule.style["background"], hint).to.eq("#ccc");
   });
 });
